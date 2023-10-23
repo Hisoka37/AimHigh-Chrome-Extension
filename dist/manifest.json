@@ -3,11 +3,6 @@
     "name": "AimHighTab",
     "description":"Transform your New Tab Page into an authentic personal dashboard",
     "version": "1.0.0",
-    "icons": {
-        "16":"icon.png" ,
-        "48": "icon.png",
-        "128": "icon.png"
-    },
     "action": {
         "default_popup": "popup.html"
     }
