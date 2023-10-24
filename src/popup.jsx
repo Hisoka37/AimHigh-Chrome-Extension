@@ -1,9 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-const Popup = () => {
+function Popup() {
   return (
-    <div>popup</div>
+    <div>
+      <h1>Hello Extension</h1>
+      <p>This is a demo</p>
+    </div>
   )
 }
 

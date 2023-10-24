@@ -1,10 +1,15 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/popup.jsx",
+  entry: {
+    popup: "./src/popup.jsx",
+  },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].js",
+  },
   module: {
     rules: [
       {
@@ -18,27 +23,14 @@ module.exports = {
         },
       },
     ],
-},
-
+  },
   plugins: [
-    new HtmlWebpackPlugin(
-        { 
-            template: "./src/popup.html",
-            filename: 'popup.html',
-         }),
-     new CopyPlugin({
-      patterns: [
-        { from: "public" },
-      ],
+    new HtmlWebpackPlugin({
+      template: "./src/popup.html",
+      filename: "popup.html",
     }),
-        ],
-
-  resolve: {
-    extensions: [".jsx", "js"],
-  },
-
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
-  },
+    new CopyPlugin({
+      patterns: [{ from: "public" }],
+    }),
+  ],
 };
