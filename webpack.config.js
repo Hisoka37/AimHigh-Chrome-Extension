@@ -4,7 +4,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    popup: './src/popup.jsx',
+    background: './src/background/background.js',
+    newtab: './src/tabs/newtab.jsx'
+
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -30,8 +32,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/popup.html',
-      filename: 'popup.html',
+      template: './src/newtab.html',
+      filename: 'newtab.html',
     }),
     new CopyPlugin({
       patterns: [{ from: 'public' }],
