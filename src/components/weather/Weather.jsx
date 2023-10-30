@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { IoIosSearch } from "react-icons/io";
 
@@ -6,12 +6,21 @@ const Weather = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
 
+  useEffect(() => {
+    const savedWeatherData = JSON.parse(localStorage.getItem("weatherData"));
+    if (savedWeatherData) {
+      setData(savedWeatherData);
+    }
+  }, []);
+
   const searchLocation = () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=00a9c72ebbcd35cf880d52e885549011`;
     axios.get(url).then((res) => {
       setData(res.data);
+
+      localStorage.setItem("weatherData", JSON.stringify(res.data));
     });
-    setLocation('');
+    setLocation("");
   };
 
   return (
