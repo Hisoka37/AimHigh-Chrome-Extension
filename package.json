@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "js-loader": "^0.0.4",
+    "axios": "^1.6.0",
+    "js-loader": "^0.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },

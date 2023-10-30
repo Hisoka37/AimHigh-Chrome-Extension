@@ -1,3 +1,3 @@
 chrome.runtime.onInstalled.addListener(() => {
-    console.log('hzufhhzufhuio');
+    console.log('this is a demo');
 }  )
