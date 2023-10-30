@@ -7,8 +7,8 @@ import Weather from "../components/weather/Weather.jsx";
 function Tab() {
   return (
     <>
-      <Message />
     <div className="relative">
+      <Message />
       <Weather />
     </div>
     </>
