@@ -5,8 +5,7 @@ import Weather from "../components/weather/Weather.jsx";
 
 function Tab() {
   return (
-    <div className="bg-red">
-      <h1 className="bg-green-500 text-3xl">Hello Extension</h1>
+    <div className="relative">
       <Weather />
     </div>
   );
