@@ -9,14 +9,6 @@ function Tab() {
       <h1 className='bg-green-500 text-3xl'>Hello Extension</h1>
       <p>This is a demo</p>
       <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message />
     </div>
   )
 }

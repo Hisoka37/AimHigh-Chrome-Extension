@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-const Message = () => {
+function Message() {
+  const [query, setQuery] = useState('');
+
+  const handleSearch = () => {
+    if (query) {
+      window.location.href = `https://www.google.com/search?q=${query}`;
+    }
+  }
+
   return (
-    <div className='bg-red'>This a message from a react component.</div>
-  )
+    <div>
+      <input
+        type="text"
+        placeholder="Search Google..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <button target="_self" onClick={handleSearch}>Search</button>
+    </div>
+  );
 }
 
-export default Message
+export default Message;
