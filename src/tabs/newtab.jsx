@@ -5,9 +5,7 @@ import Message from '../components/message.jsx'
 
 function Tab() {
   return (
-    <div className='bg-red'>
-      <h1 className='bg-green-500 text-3xl'>Hello Extension</h1>
-      <p>This is a demo</p>
+    <div>
       <Message />
     </div>
   )
