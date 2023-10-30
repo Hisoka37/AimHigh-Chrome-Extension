@@ -15,43 +15,52 @@ const Weather = () => {
   };
 
   return (
-    <div className="bg-gray-100 shadow-xl w-[500px] h-[500px] absolute top-0 right-0">
+    <div className="flex flex-col items-center bg-gray-900 shadow-xl w-[500px] h-[500px] absolute top-0 right-0">
       <div className="flex items-center">
         <input
           onChange={(event) => setLocation(event.target.value)}
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-12 rounded-lg outline-blue-500 pl-4 text-gray-600 text-lg"
+          className="m-8 w-[250px] h-12 rounded-lg outline-blue-300 pl-4 text-gray-600 text-lg"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();
             }
           }}
         />
-        <button
-          type="submit"
-          onClick={searchLocation}
-          className="w-[100px] h-[80px]"
-        >
+        <button type="submit" onClick={searchLocation} className="text-2xl text-gray-200">
           <IoIosSearch />
         </button>
       </div>
 
       <div>
-        <div>
+        <div className="flex items-center gap-2">
           <img
             src={`https://openweathermap.org/img/wn/${
               data.weather && data.weather[0].icon
             }.png`}
             alt="Weather"
+            className="w-[100px] h-[100px]"
           />
-          <p>{data.weather && data.weather[0].description}</p>
-          <h1>{data.main && data.main.temp} °C</h1>
+          <p className="text-lg text-gray-200">
+            {data.weather && data.weather[0].description}
+          </p>
         </div>
-        <h3>{data.name}</h3>
-        <h4>{data.main && data.main.humidity}% Humidity</h4>
-        <h4>{data.wind && data.wind.speed} km/h Wind</h4>
+        <h1 className="text-5xl text-gray-200">
+          {data.main && data.main.temp} °C
+        </h1>
+        <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
+        <div className="flex item justify-center gap-8 mt-10">
+          <h4 className="flex flex-col text-lg text-gray-200">
+            {data.main && data.main.humidity}
+            <span>% Humidity</span>
+          </h4>
+          <h4 className="flex flex-col text-lg text-gray-200">
+            {data.wind && data.wind.speed}
+            <span>km/h Wind</span>
+          </h4>
+        </div>
       </div>
     </div>
   );
