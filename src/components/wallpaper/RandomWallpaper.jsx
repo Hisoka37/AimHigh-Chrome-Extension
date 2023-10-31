@@ -1,12 +1,12 @@
-import React from 'react'
-import Img from "../../assets/images/img1.jpg"
+import React from "react";
+import Img from "../../assets/images/img2.jpeg";
 
 const RandomWallpaper = () => {
   return (
-    <div>
-        <img src={Img} alt="wallpaper" />
+    <div className="fixed inset-0 overflow-hidden">
+      <img src={Img} alt="wallpaper" className="w-full h-full object-cover" />
     </div>
-  )
-}
+  );
+};
 
-export default RandomWallpaper
+export default RandomWallpaper;
