@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../../assets/images/img2.jpeg";
+import Img from "../../assets/images/img23.jpg";
 
 const RandomWallpaper = () => {
   return (
