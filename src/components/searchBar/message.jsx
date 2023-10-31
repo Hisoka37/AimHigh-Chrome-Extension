@@ -50,20 +50,19 @@ function Message() {
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={handleKeyPress}
         />
+        <div className="w-72">
         <Select 
           value={selectedEngine}
           onChange={(e) => setSelectedEngine(e.target.value)}
           target="_self"
           onClick={handleSearch}
-          className="h-10 px-2  text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300"
-        >
-          <Option value="google"className="bg-gray-400"><FcGoogle /></Option>
-          <Option value="bing"><BiLogoBing /></Option>
-          <Option value="yahoo"><BiLogoYahoo/></Option>
+          className="h-10 px-2 text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300 "
+          >
+          <Option value="google"><FcGoogle className="text-xl" /> Google</Option>
+          <Option value="bing"><BiLogoBing className="text-xl" />Bing</Option>
+          <Option value="yahoo"><BiLogoYahoo className="text-xl"/>Yahoo</Option>
         </Select>
-        <button target="_self" onClick={handleSearch}>
-          <FcGoogle className="text-xl" />
-        </button>
+          </div>
       </div>
     </div>
   );
