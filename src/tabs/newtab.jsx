@@ -1,4 +1,4 @@
-import Message from '../components/message.jsx'
+import Message from '../components/searchBar/message.jsx'
 import React from "react";
 import { render } from "react-dom";
 import "../assets/style.css";

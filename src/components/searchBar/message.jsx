@@ -50,7 +50,7 @@ function Message() {
           onChange={(e) => setSelectedEngine(e.target.value)}
           target="_self"
           onClick={handleSearch}
-          className="h-10 px-2 bg-gray-300 bg-opacity-40 text-white rounded-lg outline-none focus:bg-opacity-100 transition duration-300"
+          className="h-10 px-2 bg-gray-300 bg-opacity-40 text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300"
         >
           <option value="google">Google</option>
           <option value="bing">Bing</option>
