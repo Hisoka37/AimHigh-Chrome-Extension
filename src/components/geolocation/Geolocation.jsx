@@ -23,7 +23,7 @@ const Geolocation = () => {
   }, []);
 
   return (
-    <div className="absolute top-20 left-20">
+    <div className="bg-gray-900 bg-opacity-70 absolute top-20 left-20 rounded-lg p-4">
       {localTime && (
         <div>
           <p className="text-8xl text-gray-100">{localTime}</p>
