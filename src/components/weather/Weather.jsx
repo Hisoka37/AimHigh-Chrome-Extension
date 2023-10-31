@@ -66,12 +66,12 @@ const Weather = () => {
         <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
         <div className="flex item justify-center gap-8 mt-10">
           <h4 className="flex flex-col items-center text-lg text-gray-200">
-            {data.main && data.main.humidity.toFixed()}
-            <span>% Humidity</span>
+            {data.main && data.main.humidity.toFixed()}% 
+            <span>Humidity</span>
           </h4>
           <h4 className="flex flex-col items-center text-lg text-gray-200">
-            {data.wind && data.wind.speed.toFixed()}
-            <span>km/h Wind</span>
+            {data.wind && data.wind.speed.toFixed()}km/h
+            <span> Wind</span>
           </h4>
         </div>
       </div>
