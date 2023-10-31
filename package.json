@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-tailwind/react": "^2.1.4",
     "axios": "^1.6.0",
     "js-loader": "^0.0.2",
     "react": "^18.2.0",

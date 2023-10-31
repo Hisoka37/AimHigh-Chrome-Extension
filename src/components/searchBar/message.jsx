@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
+import {BiLogoBing, BiLogoYahoo} from "react-icons/bi"
+import { Select, Option } from "@material-tailwind/react";
+
 
 function Message() {
   const [query, setQuery] = useState("");
@@ -33,6 +36,8 @@ function Message() {
         handleSearch()
       }
     }
+
+    
   return (
     <div className="flex items-center justify-center h-screen p-0 ">
       <div className="flex gap-3 w-1/4">
@@ -45,17 +50,17 @@ function Message() {
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={handleKeyPress}
         />
-        <select
+        <Select 
           value={selectedEngine}
           onChange={(e) => setSelectedEngine(e.target.value)}
           target="_self"
           onClick={handleSearch}
-          className="h-10 px-2 bg-gray-300 bg-opacity-40 text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300"
+          className="h-10 px-2  text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300"
         >
-          <option value="google">Google</option>
-          <option value="bing">Bing</option>
-          <option value="yahoo">Yahoo</option>
-        </select>
+          <Option value="google"className="bg-gray-400"><FcGoogle /></Option>
+          <Option value="bing"><BiLogoBing /></Option>
+          <Option value="yahoo"><BiLogoYahoo/></Option>
+        </Select>
         <button target="_self" onClick={handleSearch}>
           <FcGoogle className="text-xl" />
         </button>
