@@ -24,14 +24,14 @@ const Weather = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-gray-900 shadow-xl w-[400px] h-[400px] absolute top-0 right-0">
+    <div className="flex flex-col items-center bg-gray-900 bg-opacity-70 w-[400px] h-[400px] absolute top-0 right-0">
       <div className="flex items-center">
         <input
           onChange={(event) => setLocation(event.target.value)}
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-12 rounded-lg outline-blue-300 pl-4 text-gray-600 text-lg"
+          className="m-8 w-[250px] h-12 rounded-lg outline-blue-300 pl-4 bg-slate-100 text-gray-600 text-lg"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();
@@ -66,8 +66,7 @@ const Weather = () => {
         <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
         <div className="flex item justify-center gap-8 mt-10">
           <h4 className="flex flex-col items-center text-lg text-gray-200">
-            {data.main && data.main.humidity.toFixed()}% 
-            <span>Humidity</span>
+            {data.main && data.main.humidity.toFixed()}%<span>Humidity</span>
           </h4>
           <h4 className="flex flex-col items-center text-lg text-gray-200">
             {data.wind && data.wind.speed.toFixed()}km/h

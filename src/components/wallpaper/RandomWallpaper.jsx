@@ -2,7 +2,6 @@ import React from "react";
 import images from "../../objects/images.json";
 
 const RandomWallpaper = () => {
-    console.log(images);
   const imageKeys = Object.keys(images);
   const randomIndex = Math.floor(Math.random() * imageKeys.length);
   const randomImageKey = imageKeys[randomIndex];
