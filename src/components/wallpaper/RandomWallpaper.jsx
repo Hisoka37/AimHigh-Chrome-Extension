@@ -6,7 +6,6 @@ const RandomWallpaper = () => {
   const randomIndex = Math.floor(Math.random() * imageKeys.length);
   const randomImageKey = imageKeys[randomIndex];
   const randomImageSrc = images[randomImageKey];
-  console.log(randomImageSrc);
 
   return (
     <div className="fixed inset-0 overflow-hidden">
