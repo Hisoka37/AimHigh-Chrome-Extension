@@ -28,6 +28,11 @@ function Message() {
     }
   };
 
+    const handleKeyPress = (e) => {
+      if(e.key == 'Enter') {
+        handleSearch()
+      }
+    }
   return (
     <div className="flex items-center justify-center h-screen p-0 ">
       <div className="flex gap-3 w-1/4">
@@ -38,6 +43,7 @@ function Message() {
           placeholder="Search Google..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onKeyPress={handleKeyPress}
         />
         <select
           value={selectedEngine}
