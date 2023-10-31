@@ -10,14 +10,26 @@ const Weather = () => {
     const savedWeatherData = JSON.parse(localStorage.getItem("weatherData"));
     if (savedWeatherData) {
       setData(savedWeatherData);
+    } else {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        fetchWeatherData(latitude, longitude);
+      });
     }
   }, []);
+
+  const fetchWeatherData = (latitude, longitude) => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=00a9c72ebbcd35cf880d52e885549011`;
+    axios.get(url).then((res) => {
+      setData(res.data);
+      localStorage.setItem("weatherData", JSON.stringify(res.data));
+    });
+  };
 
   const searchLocation = () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=00a9c72ebbcd35cf880d52e885549011`;
     axios.get(url).then((res) => {
       setData(res.data);
-
       localStorage.setItem("weatherData", JSON.stringify(res.data));
     });
     setLocation("");
