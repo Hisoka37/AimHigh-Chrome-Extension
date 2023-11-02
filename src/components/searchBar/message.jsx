@@ -45,7 +45,7 @@ function Message() {
         <input
           className="w-3/4 h-10 px-2 bg-gray-300 bg-opacity-40 text-white rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
           type="text"
-          placeholder="Search Google..."
+          placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={handleKeyPress}
@@ -56,9 +56,9 @@ function Message() {
           onChange={(e) => setSelectedEngine(e.target.value)}
           target="_self"
           onClick={handleSearch}
-          className="h-10 px-2 text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300 "
+          className="h-10 px-5 text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300 "
           >
-          <Option value="google"><FcGoogle className="text-xl" /> Google</Option>
+          <Option value="google" className="pt-6"><FcGoogle className="text-xl" /> Google</Option>
           <Option value="bing"><BiLogoBing className="text-xl" />Bing</Option>
           <Option value="yahoo"><BiLogoYahoo className="text-xl"/>Yahoo</Option>
         </Select>
