@@ -8,8 +8,10 @@ const Geolocation = () => {
       window.navigator.geolocation.getCurrentPosition((position) => {
         const userTimezoneOffset = new Date().getTimezoneOffset();
         const userTime = new Date(
-          position.timestamp - userTimezoneOffset * 60000
+          position.timestamp - userTimezoneOffset * 60 * 1000
         );
+
+        userTime.setHours(userTime.getHours() - 1);
 
         const formattedTime = userTime.toLocaleTimeString([], {
           hour: "2-digit",

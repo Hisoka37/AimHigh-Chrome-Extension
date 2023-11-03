@@ -12,7 +12,7 @@ const RandomWallpaper = () => {
       <img
         src={randomImageSrc}
         alt="wallpaper"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-fill"
       />
     </div>
   );
