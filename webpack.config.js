@@ -1,6 +1,6 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -27,6 +27,17 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "images/[name].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -35,7 +46,10 @@ module.exports = {
       filename: "newtab.html",
     }),
     new CopyPlugin({
-      patterns: [{ from: "public" }],
+      patterns: [
+        { from: "public" },
+        { from: "src/assets/images", to: "images" },
+      ],
     }),
   ],
 };
