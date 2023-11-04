@@ -39,11 +39,11 @@ function Message() {
 
     
   return (
-    <div className="flex items-center justify-center h-screen p-0 ">
+    <div className=" bg-gray-900 bg-opacity-70 flex items-center absolute  buttom-0 left-0  justify-center h-screen p-0 ">
       <div className="flex gap-3 w-1/4">
         <BsSearch className="text-2xl" /> {/* Increase icon size */}
         <input
-          className="w-3/4 h-10 px-2 bg-gray-300 bg-opacity-40 text-white rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
+          className="w-[250px]  h-10 pl-55 text-gray-600 bg-gray-300 bg-opacity-40  rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
           type="text"
           placeholder="Search..."
           value={query}
