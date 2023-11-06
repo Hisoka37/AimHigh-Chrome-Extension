@@ -22,7 +22,7 @@ function Message() {
       value: "bing",
       label: (
         <div>
-          <BiLogoBing className="mr-2 text-xl" />
+          <BiLogoBing className="mr-2 text-xl text-red-500" />
         </div>
       ),
     },
@@ -30,7 +30,7 @@ function Message() {
       value: "yahoo",
       label: (
         <div>
-          <BiLogoYahoo className="mr-2 text-xl" />
+          <BiLogoYahoo className="mr-2 text-xl text-yellow-500" />
         </div>
       ),
     },
@@ -64,12 +64,26 @@ function Message() {
     }
   };
 
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      background: 'transparent',
+      display: 'flex',
+      flexWrap: 'nowrap', 
+      borderColor: 'hsl(0deg 78.56% 55.56%);',
+      width: '7em'
+    }),
+    menu: (provided) => ({
+      ...provided,
+      background: 'transparent',
+      width: '4em'
+    }),
+  };
   return (
-    <div className=" bg-gray-900 bg-opacity-70 flex items-center absolute  buttom-0 left-0  justify-center h-screen p-0 ">
-      <div className="flex gap-3 w-1/4">
-        <BsSearch className="text-2xl" /> {/* Increase icon size */}
+    <div className="  flex items-center absolute top-56 left-20  justify-center  ">
+      <div className="flex gap-4"> {/* Increase icon size */}
         <input
-          className="w-[250px]  h-10 pl-55 text-gray-600 bg-gray-300 bg-opacity-40  rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
+          className=" h-9.5 text-gray-60 bg-gray-300 bg-opacity-40  rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
           type="text"
           placeholder="Search..."
           value={query}
@@ -83,6 +97,8 @@ function Message() {
               setSelectedEngine(selectedOption.value)
             }
             options={options}
+            styles={customStyles}
+            isSearchable={false}
           />
         </div>
       </div>

@@ -13,7 +13,7 @@ function Tab() {
     <div className="relative">
       <RandomWallpaper />
       <Message />
-      {/* <Weather /> */}
+      <Weather />
       <Geolocation />
       <TodoApp />
     </div>
