@@ -1,13 +1,40 @@
 import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import {BiLogoBing, BiLogoYahoo} from "react-icons/bi"
-import { Select, Option } from "@material-tailwind/react";
-
+import { BiLogoBing, BiLogoYahoo } from "react-icons/bi";
+import Select from "react-select";
+// import 'react-select/dist/react-select.css';
 
 function Message() {
   const [query, setQuery] = useState("");
   const [selectedEngine, setSelectedEngine] = useState("google");
+
+  const options = [
+    {
+      value: "google",
+      label: (
+        <div>
+          <FcGoogle className="mr-2 text-xl" />
+        </div>
+      ),
+    },
+    {
+      value: "bing",
+      label: (
+        <div>
+          <BiLogoBing className="mr-2 text-xl" />
+        </div>
+      ),
+    },
+    {
+      value: "yahoo",
+      label: (
+        <div>
+          <BiLogoYahoo className="mr-2 text-xl" />
+        </div>
+      ),
+    },
+  ];
 
   const handleSearch = () => {
     if (query) {
@@ -31,13 +58,12 @@ function Message() {
     }
   };
 
-    const handleKeyPress = (e) => {
-      if(e.key == 'Enter') {
-        handleSearch()
-      }
+  const handleKeyPress = (e) => {
+    if (e.key == "Enter") {
+      handleSearch();
     }
+  };
 
-    
   return (
     <div className=" bg-gray-900 bg-opacity-70 flex items-center absolute  buttom-0 left-0  justify-center h-screen p-0 ">
       <div className="flex gap-3 w-1/4">
@@ -50,19 +76,15 @@ function Message() {
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={handleKeyPress}
         />
-        <div className="w-72">
-        <Select 
-          value={selectedEngine}
-          onChange={(e) => setSelectedEngine(e.target.value)}
-          target="_self"
-          onClick={handleSearch}
-          className="h-10 px-5 text-black rounded-lg outline-none focus:bg-opacity-100 transition duration-300 "
-          >
-          <Option value="google" className="pt-6"><FcGoogle className="text-xl" /> Google</Option>
-          <Option value="bing"><BiLogoBing className="text-xl" />Bing</Option>
-          <Option value="yahoo"><BiLogoYahoo className="text-xl"/>Yahoo</Option>
-        </Select>
-          </div>
+        <div className="relative inline-flex">
+          <Select
+            value={options.find((option) => option.value === selectedEngine)}
+            onChange={(selectedOption) =>
+              setSelectedEngine(selectedOption.value)
+            }
+            options={options}
+          />
+        </div>
       </div>
     </div>
   );
