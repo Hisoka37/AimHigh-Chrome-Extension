@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function TodoApp() {
   const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
+  const [newTask, setNewTask] = useState("");
   const [editingIndex, setEditingIndex] = useState(-1);
 
   const addTask = () => {
-    if (newTask.trim() !== '') {
+    if (newTask.trim() !== "") {
       setTasks([...tasks, { text: newTask, completed: false }]);
-      setNewTask('');
+      setNewTask("");
     }
   };
 
@@ -32,24 +32,49 @@ function TodoApp() {
     setTasks(updatedTasks);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key == "Enter") {
+      addTask();
+    }
+  };
+
+  const myThoughts = [
+    "Play Tennis",
+    "Walk 6 KM",
+    "Drink a Glass of Water",
+    "Plant a Tree",
+    "GogShopping",
+  ];
+
   return (
-    <div className="max-w-md mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">To-Do List</h1>
-      <div className="flex space-x-2 mb-4">
+    <div className="absolute  inset-x-0 top-0 items-start max-w-md mx-auto ml-25 pt-60">
+      <h1 className=" font-extrabold leading-3 tracking-tight text-white sm:text-5xl  filter transition duration-300 drop-shadow-xl">
+                                    <span className="block">It's Time to Start :</span></h1>
+      <div className="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
         <input
           type="text"
-          className="flex-grow border p-2"
-          placeholder="Add a task..."
+          placeholder={
+            myThoughts[Math.floor(Math.random() * myThoughts.length)]
+          }
           value={newTask}
+          className="w-full h-12 px-6  font-medium text-indigo-800 focus:outline-none border"
           onChange={(e) => setNewTask(e.target.value)}
+          onKeyPress={handleKeyPress}
         />
-        <button className="bg-blue-500 text-white p-2" onClick={addTask}>
-          Add
-        </button>
+        <span className="relative top-0 right-0 block">
+          <button
+            type="button"
+            className="inline-flex items-center w-28 h-12 px-8 text-base font-extrabold leading-6 text-white transition duration-150 ease-in-out bg-indigo-400 border border-transparent hover:bg-indigo-700 focus:outline-none active:bg-indigo-700"
+            onClick={addTask}
+          >
+            Add
+          </button>
+        </span>
       </div>
-      <ul>
+
+      <ul className="pt-2">
         {tasks.map((task, index) => (
-          <li key={index} className="flex justify-between items-center mb-2">
+          <li key={index} className="flex justify-between items-center mb-2 bg-white p-4 rounded-lg ">
             <input
               type="checkbox"
               checked={task.completed}
@@ -72,20 +97,20 @@ function TodoApp() {
             ) : task.completed ? (
               <del>{task.text}</del>
             ) : (
-              task.text
+              <h2 className="text-2xl leading-3 ">🚀{task.text}</h2>
             )}
-            <div>
+            <div className="flex flex-col gap-2">
               {editingIndex !== index && (
                 <button
                   onClick={() => startEditing(index)}
-                  className="text-yellow-500 mr-2"
+                  className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Edit
                 </button>
               )}
               <button
                 onClick={() => deleteTask(index)}
-                className="text-red-500"
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
               >
                 Delete
               </button>
