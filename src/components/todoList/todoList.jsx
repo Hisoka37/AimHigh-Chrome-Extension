@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function TodoApp() {
-  const [tasks, setTasks] = useState([]);
+   const storedTasks = localStorage.getItem('tasks');
+
+  // Parse the JSON data or use an empty array if it's null or invalid
+  const taskStorage = storedTasks ? JSON.parse(storedTasks) : [];
+
+  const [tasks, setTasks] = useState(taskStorage);
   const [newTask, setNewTask] = useState("");
   const [editingIndex, setEditingIndex] = useState(-1);
+
+  useEffect (() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
 
   const addTask = () => {
     if (newTask.trim() !== "") {
