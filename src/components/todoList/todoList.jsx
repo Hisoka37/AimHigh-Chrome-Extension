@@ -9,10 +9,28 @@ function TodoApp() {
   const [tasks, setTasks] = useState(taskStorage);
   const [newTask, setNewTask] = useState("");
   const [editingIndex, setEditingIndex] = useState(-1);
+  const [lastUpdate, setLastUpdate] = useState(
+    localStorage.getItem('lastUpdate') || new Date().getTime()
+  );
 
-  useEffect (() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks))
-  }, [tasks])
+
+  // Update local storage when tasks change
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    const currentTime = new Date().getTime();
+    const timeSinceLastUpdate = currentTime - lastUpdate;
+  
+    // Check if 24 hours have passed since the last update
+    if (timeSinceLastUpdate > 24 * 60 * 60 * 1000) {
+      localStorage.removeItem('tasks');
+      setTasks([]);
+      setLastUpdate(currentTime);
+    }
+    localStorage.setItem('lastUpdate', currentTime.toString());
+  }, [lastUpdate]);
 
   const addTask = () => {
     if (newTask.trim() !== "") {
