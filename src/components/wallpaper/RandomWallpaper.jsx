@@ -8,7 +8,7 @@ const RandomWallpaper = () => {
   const randomImageSrc = images[randomImageKey];
 
   return (
-    <div className="fixed inset-0 overflow-hidden">
+    <div className="fixed inset-0 overflow-hidden z-0">
       <img
         src={randomImageSrc}
         alt="wallpaper"
