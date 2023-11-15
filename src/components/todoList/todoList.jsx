@@ -66,11 +66,12 @@ function TodoApp() {
   };
 
   const myThoughts = [
-    "Play Tennis",
+    "Build Side Project",
     "Walk 6 KM",
     "Drink a Glass of Water",
-    "Plant a Tree",
-    "GogShopping",
+    "Apply to jobs 😎",
+    "GoGym",
+    "Start cloud course"
   ];
 
   return (
@@ -99,14 +100,14 @@ function TodoApp() {
         </span>
       </div>
 
-      <ul className="pt-2">
+      <ul className="pt-2 w-full">
         {tasks.map((task, index) => (
-          <li key={index} className="flex justify-between items-center mb-2 bg-white p-4 rounded-lg ">
+          <li key={index} className="flex justify-between items-center mb-2 bg-white p-4 rounded-lg  ">
             <input
               type="checkbox"
               checked={task.completed}
               onChange={() => toggleComplete(index)}
-              className="mr-2"
+              className=" w-5 h-10 px-5 font-medium text-indigo-800 focus:outline-none border rounded shadow-sm"
             />
             {editingIndex === index ? (
               <input
@@ -118,13 +119,14 @@ function TodoApp() {
                   updatedTasks[index].text = updatedText;
                   setTasks(updatedTasks);
                 }}
+                onKeyPress={handleKeyPress}
                 onBlur={finishEditing} // Finish editing when input loses focus
                 className="flex-grow border p-2"
               />
             ) : task.completed ? (
-              <del>{task.text}</del>
+              <h3 className="text-2xl mr-18  ">🎉<del>{task.text}</del></h3>
             ) : (
-              <h2 className="text-2xl leading-3 ">🚀{task.text}</h2>
+              <h3 className="text-2xl mr-18  ">🚀{task.text}</h3>
             )}
             <div className="flex flex-col gap-2">
               {editingIndex !== index && (
