@@ -83,7 +83,7 @@ function Message() {
     <div className="  flex items-center absolute top-56 left-20  justify-center  ">
       <div className="flex gap-4"> {/* Increase icon size */}
         <input
-          className=" h-9.5 text-gray-60 bg-gray-300 bg-opacity-40  rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
+          className=" h-9.5 pl-4 text-gray-60 bg-gray-300 bg-opacity-40  rounded-lg outline-none focus:bg-opacity-100 transition duration-300 hover:bg-opacity-100"
           type="text"
           placeholder="Search..."
           value={query}
