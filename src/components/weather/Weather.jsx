@@ -6,6 +6,8 @@ import Cloud from "../../assets/Weather Assets/cloud.png";
 import Drizzle from "../../assets/Weather Assets/drizzle.png";
 import Rain from "../../assets/Weather Assets/rain.png";
 import Snow from "../../assets/Weather Assets/snow.png";
+import Humidity from "../../assets/Weather Assets/humidity.png";
+import Wind from "../../assets/Weather Assets/wind.png";
 
 const Weather = () => {
   const [data, setData] = useState({});
@@ -69,7 +71,7 @@ const Weather = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center bg-gray-900 bg-opacity-70 w-[350px] h-[350px] absolute top-0 right-0 rounded-sm">
+    <div className=" flex flex-col items-center bg-gray-900 bg-opacity-70 w-[350px] h-[280px] absolute top-0 right-0 rounded-sm">
       <div className="flex">
         <input
           onChange={(event) => setLocation(event.target.value)}
@@ -93,29 +95,34 @@ const Weather = () => {
       </div>
 
       <div>
-      <div className="flex gap-4">
-        <img
+        <div className="flex gap-4">
+          <img
             src={getWeatherIcon(data.weather && data.weather[0].icon)}
             alt="Weather"
             className="w-[80px] h-[80px]"
           />
-        <div>
-          <h1 className="text-6xl text-gray-200">
-          {data.main && data.main.temp.toFixed()} °C
-        </h1>
-        <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
+          <div>
+            <h1 className="text-6xl text-gray-200">
+              {data.main && data.main.temp.toFixed()} °C
+            </h1>
+            <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
+          </div>
         </div>
-      </div>
-          
-        
+
         <div className="flex item justify-center gap-8 mt-6 mb-2">
-          <h4 className="flex flex-col items-center text-sm text-gray-200">
-            {data.main && data.main.humidity.toFixed()}%<span>Humidity</span>
-          </h4>
-          <h4 className="flex flex-col items-center text-sm text-gray-200">
-            {data.wind && data.wind.speed.toFixed()}km/h
-            <span> Wind</span>
-          </h4>
+          <div className="flex gap-2">
+            <img src={Humidity} alt="Humidity" className="w-[25px] h-[25px]" />
+            <h4 className="flex flex-col items-center text-sm text-gray-200">
+              {data.main && data.main.humidity.toFixed()}%<span>Humidity</span>
+            </h4>
+          </div>
+          <div className="flex gap-2">
+            <img src={Wind} alt="Wind" className="w-[25px] h-[25px]" />
+            <h4 className="flex flex-col items-center text-sm text-gray-200">
+              {data.wind && data.wind.speed.toFixed()}km/h
+              <span> Wind</span>
+            </h4>
+          </div>
         </div>
       </div>
     </div>
