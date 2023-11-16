@@ -2,7 +2,7 @@
 <details>
 <summary>Table of Contents</summary>
 
-- [AimHigh Tab](#aimhigh-tab)
+- [AimHigh Tab 📈](#aimhigh-tab-)
   - [🧰 Tech Stack  ](#-tech-stack--)
   - [✨ Key Features  ](#-key-features--)
   - [📘 Getting Started  ](#-getting-started--)
@@ -22,7 +22,7 @@
   - [📜 License ](#-license-)
 </details>
 
-# AimHigh Tab
+# AimHigh Tab 📈
 
 Transform your New Tab Page into an authentic personal dashboard for enhanced focus, motivation, and organization. With features likee customizable to-do lists, real-time weather updates, daily inspirational wallpapers, and motivating quotes, experience the perfect start to each browsing session as you work towards your goals.
 
@@ -102,7 +102,7 @@ npm run dev
 
 4- Click on the "Load unpacked" button.
 
-5- Navigate to the directory where your extension's code is located and select the **'dist'** folder.
+5- Navigate to the directory where the extension's code is located and select the **'dist'** folder.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
