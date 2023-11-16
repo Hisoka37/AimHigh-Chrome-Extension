@@ -12,6 +12,7 @@
     - [💻 Usage](#-usage)
   - [Authors  ](#authors--)
     - [👧🏼 **Salwa Ballouti**:](#-salwa-ballouti)
+    - [👦🏼 **Walid Kabboussa**:](#-walid-kabboussa)
   - [🎯 Future Features  ](#-future-features--)
   - [🤝 Contribution  ](#-contribution--)
     - [Get in Touch 🤙](#get-in-touch-)
@@ -22,7 +23,7 @@
 
 # AimHigh Tab
 
-This is a game application built using React and TypeScript that allows users to search for games, filter them by genres and platforms, and sort them by relevance using data from the Rawg API, the styling based on the chakra-ui for better user experience.
+Transform your New Tab Page into an authentic personal dashboard for enhanced focus, motivation, and organization. With features likee customizable to-do lists, real-time weather updates, daily inspirational wallpapers, and motivating quotes, experience the perfect start to each browsing session as you work towards your goals.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -30,25 +31,20 @@ This is a game application built using React and TypeScript that allows users to
 
 - React: A JavaScript library for building user interfaces.
   
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-  
-- Chakra-ui: s a popular open-source library for building user interfaces in React applications.
-  
-- Axios: A promise-based HTTP client for making API requests.
-  
-- Rawg API: A video game database API for retrieving game information.
+- Tailwind: a utility-first CSS framework.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ✨ Key Features  <a name="key-features"></a>
 
-- <b>Search:</b> Users can search for games by entering keywords in the search bar.
+- <b>Set daily tasks:</b> Easily organize and manage your day by setting and tracking daily tasks, helping you stay productive and focused.
 
-- <b>Filter by Genres:</b> Users can filter games by selecting one or more genres from the genre filter dropdown.
+- <b>Check the weather and Time:</b> Stay informed about your local weather conditions and current time at a glance, ensuring you are prepared for the day ahead.
 
-- <b>Filter by Platforms:</b> Users can filter games by selecting one or more platforms from the platform filter dropdown.
+- <b>Random wallpapers background:</b> Experience a refreshing visual environment with dynamically changing wallpapers, adding a touch of variety and inspiration to your workspace.
 
-- <b>Sort by Relevance:</b> Users can sort the displayed games by relevance.
+- <b>Motivational quote:</b> Receive a daily dose of motivation with inspirational quotes, fostering a positive mindset and encouraging a productive and optimistic outlook on your tasks.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,7 +64,7 @@ Make sure you have the following installed on your machine:
 Clone this repository to your desired foler.
 
 ```sh
-git clone https://github.com/Salwa99/Game-app.git && cd Game-app
+git clone https://github.com/Hisoka37/AimHigh-Chrome-Extension.git && cd AimHigh-Chrome-Extension
 ```
 
 ### 📥 Installation
@@ -88,12 +84,6 @@ yarn install
 to build the application, execute the following command:
 
 ```sh
-npm run build
-```
-
-To run the development server, execute the following command:
-
-```sh
 npm run dev
 ```
 
@@ -105,14 +95,22 @@ npm run dev
 - GitHub: [@Salwa99](https://github.com/Salwa99)
 - Twitter: [@SalwaBallouti](https://twitter.com/salwa_ballouti)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/salwa-ballouti)
+  
+### 👦🏼 **Walid Kabboussa**:
+- GitHub: [@Hisoka37](https://github.com/Hisoka37)
+- Twitter: [@WalidKabboussa](https://twitter.com/KBwalid9)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/walidkb/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎯 Future Features  <a name="future-features"></a>
 
-- [ ] User Authentication and Profiles.
-- [ ] Game Reviews and Ratings.
-- [ ] User Comments and Discussions.
+- [ ] Allow users to personalize the extension's appearance with customizable themes and color schemes.
+- [ ] Expand language options to cater to a broader user base, ensuring accessibility for users around the world.
+- [ ] Include more detailed weather information such as hourly forecasts, extended forecasts, and weather alerts.
+- [ ] Integrate analytics to provide users insights into their productivity habits and trends over time.
+- [ ] Integrate a chatbot feature for users to interactively receive assistance, ask questions, and get personalized recommendations within the extension.
+
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +121,7 @@ Your contributions can make this application even better for gamers worldwide. W
 ### Get in Touch 🤙
 If you have questions, need help, or want to discuss your contributions, don't hesitate to reach out. You can create an issue or a PR.
 
-Once again, thank you for considering contributing to my project. Together, we can make gaming even more enjoyable for everyone!
+Once again, thank you for considering contributing to our project. Together, we can make gaming even more enjoyable for everyone!
 
 Cheers! 🚀
 
@@ -137,7 +135,7 @@ If you like this project, please consider giving it a 🌟.
 
 ## 🙏 Acknowledgements
 
-I would like to express my gratitude to the [Rawg API](https://rawg.io/) for providing the game data that powers this application. Their comprehensive API allows me to offer a wide range of gaming information to our users, making this project possible.
+I would like to express my gratitude to the [Open Weather API](https://openweathermap.org/) for providing the weather data that powers this extension. Their comprehensive API allows me to offer a wide range of forcast information to our users, making this project possible.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
