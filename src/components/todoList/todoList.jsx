@@ -75,9 +75,10 @@ function TodoApp() {
   ];
 
   return (
-    <div className="absolute  inset-x-0 top-0 items-start max-w-md mx-auto ml-25 pt-60">
+    <div className="absolute inset-x-0 top-0 items-start max-w-md mx-auto ml-25 pt-96 lg:pt-60">
       <h1 className=" font-extrabold leading-3 tracking-tight text-white sm:text-5xl  filter transition duration-300 drop-shadow-xl">
-                                    <span className="block">It's Time to Start :</span></h1>
+        <span className="block">It's Time to Start :</span>
+      </h1>
       <div className="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
         <input
           type="text"
@@ -102,7 +103,10 @@ function TodoApp() {
 
       <ul className="pt-2 w-full">
         {tasks.map((task, index) => (
-          <li key={index} className="flex justify-between items-center mb-2 bg-white p-4 rounded-lg  ">
+          <li
+            key={index}
+            className="flex justify-between items-center mb-2 bg-white p-4 rounded-lg  "
+          >
             <input
               type="checkbox"
               checked={task.completed}
@@ -124,7 +128,9 @@ function TodoApp() {
                 className="flex-grow border p-2"
               />
             ) : task.completed ? (
-              <h3 className="text-2xl mr-18  ">🎉<del>{task.text}</del></h3>
+              <h3 className="text-2xl mr-18  ">
+                🎉<del>{task.text}</del>
+              </h3>
             ) : (
               <h3 className="text-2xl mr-18  ">🚀{task.text}</h3>
             )}
