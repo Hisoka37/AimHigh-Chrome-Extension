@@ -36,14 +36,14 @@ const Weather = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center bg-gray-900 bg-opacity-70 w-[400px] h-[400px] absolute top-0 right-0 rounded-sm">
-      <div className="flex items-center">
+    <div className=" flex flex-col items-center bg-gray-900 bg-opacity-70 w-[350px] h-[350px] absolute top-0 right-0 rounded-sm">
+      <div className="flex">
         <input
           onChange={(event) => setLocation(event.target.value)}
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-12 rounded-lg outline-blue-300 pl-4 bg-slate-100 text-gray-600 text-lg"
+          className="m-8 w-[250px] h-10 rounded-md outline-gray-300 pl-4 bg-gray-100 bg-opacity-70 text-gray-600 text-lg"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();
@@ -53,7 +53,7 @@ const Weather = () => {
         <button
           type="submit"
           onClick={searchLocation}
-          className="text-2xl text-gray-200"
+          className="text-xl text-gray-200"
         >
           <IoIosSearch />
         </button>
@@ -66,21 +66,21 @@ const Weather = () => {
               data.weather && data.weather[0].icon
             }.png`}
             alt="Weather"
-            className="w-[100px] h-[100px]"
+            className="w-[80px] h-[80px]"
           />
           <p className="text-lg text-gray-200">
             {data.weather && data.weather[0].description}
           </p>
         </div>
-        <h1 className="text-5xl text-gray-200">
+        <h1 className="text-6xl text-gray-200">
           {data.main && data.main.temp.toFixed()} °C
         </h1>
         <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
-        <div className="flex item justify-center gap-8 mt-10">
-          <h4 className="flex flex-col items-center text-lg text-gray-200">
+        <div className="flex item justify-center gap-8 mt-6 mb-2">
+          <h4 className="flex flex-col items-center text-sm text-gray-200">
             {data.main && data.main.humidity.toFixed()}%<span>Humidity</span>
           </h4>
-          <h4 className="flex flex-col items-center text-lg text-gray-200">
+          <h4 className="flex flex-col items-center text-sm text-gray-200">
             {data.wind && data.wind.speed.toFixed()}km/h
             <span> Wind</span>
           </h4>
