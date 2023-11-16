@@ -78,7 +78,7 @@ const Weather = () => {
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-10 rounded-md outline-gray-300 pl-4 bg-gray-100 bg-opacity-70 text-gray-600 text-lg"
+          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-300 pl-4 bg-gray-900 bg-opacity-70 text-gray-700 text-lg transition duration-500 ease-in-out transform hover:bg-gray-300 hover:scale-105 outline-0"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();
@@ -88,7 +88,7 @@ const Weather = () => {
         <button
           type="submit"
           onClick={searchLocation}
-          className="text-xl text-gray-200"
+          className="text-2xl text-gray-200 pr-3"
         >
           <IoIosSearch />
         </button>
