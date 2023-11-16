@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { IoIosSearch } from "react-icons/io";
+import Clear from "../../assets/Weather Assets/clear.png";
+import Cloud from "../../assets/Weather Assets/cloud.png";
+import Drizzle from "../../assets/Weather Assets/drizzle.png";
+import Rain from "../../assets/Weather Assets/rain.png";
+import Snow from "../../assets/Weather Assets/snow.png";
 
 const Weather = () => {
   const [data, setData] = useState({});
@@ -35,6 +40,34 @@ const Weather = () => {
     setLocation("");
   };
 
+  const getWeatherIcon = (iconCode) => {
+    switch (iconCode) {
+      case "01d":
+      case "01n":
+        return Clear;
+      case "02d":
+      case "02n":
+        return Cloud;
+      case "03d":
+      case "03n":
+        return Drizzle;
+      case "04d":
+      case "04n":
+        return Drizzle;
+      case "09d":
+      case "09n":
+        return Rain;
+      case "10d":
+      case "10n":
+        return Rain;
+      case "13d":
+      case "13n":
+        return Snow;
+      default:
+        return Clear;
+    }
+  };
+
   return (
     <div className=" flex flex-col items-center bg-gray-900 bg-opacity-70 w-[350px] h-[350px] absolute top-0 right-0 rounded-sm">
       <div className="flex">
@@ -60,22 +93,21 @@ const Weather = () => {
       </div>
 
       <div>
-        <div className="flex items-center gap-2">
-          <img
-            src={`https://openweathermap.org/img/wn/${
-              data.weather && data.weather[0].icon
-            }.png`}
+      <div className="flex gap-4">
+        <img
+            src={getWeatherIcon(data.weather && data.weather[0].icon)}
             alt="Weather"
             className="w-[80px] h-[80px]"
           />
-          <p className="text-lg text-gray-200">
-            {data.weather && data.weather[0].description}
-          </p>
-        </div>
-        <h1 className="text-6xl text-gray-200">
+        <div>
+          <h1 className="text-6xl text-gray-200">
           {data.main && data.main.temp.toFixed()} °C
         </h1>
         <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
+        </div>
+      </div>
+          
+        
         <div className="flex item justify-center gap-8 mt-6 mb-2">
           <h4 className="flex flex-col items-center text-sm text-gray-200">
             {data.main && data.main.humidity.toFixed()}%<span>Humidity</span>
