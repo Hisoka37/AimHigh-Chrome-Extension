@@ -71,14 +71,14 @@ const Weather = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center bg-gray-900 bg-opacity-70 w-[350px] h-[280px] absolute top-0 right-0 rounded-sm">
+    <div className=" flex flex-col items-center bg-gray-300 bg-opacity-70 w-[350px] h-[280px] absolute top-4 right-4 rounded-lg">
       <div className="flex">
         <input
           onChange={(event) => setLocation(event.target.value)}
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-300 pl-4 bg-gray-900 bg-opacity-70 text-gray-700 text-lg transition duration-500 ease-in-out transform hover:bg-gray-300 hover:scale-105 outline-0"
+          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-400 pl-4 bg-gray-300 bg-opacity-70 text-gray-300 text-lg transition duration-500 ease-in-out transform hover:bg-gray-700 hover:scale-105 outline-0"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();
@@ -88,7 +88,7 @@ const Weather = () => {
         <button
           type="submit"
           onClick={searchLocation}
-          className="text-2xl text-gray-200 pr-3"
+          className="text-2xl text-gray-800 pr-3"
         >
           <IoIosSearch />
         </button>
@@ -102,23 +102,23 @@ const Weather = () => {
             className="w-[80px] h-[80px]"
           />
           <div>
-            <h1 className="text-6xl text-gray-200">
+            <h1 className="text-6xl text-gray-800">
               {data.main && data.main.temp.toFixed()} °C
             </h1>
-            <h3 className="text-lg text-gray-300 font-bold">{data.name}</h3>
+            <h3 className="text-lg text-gray-800 font-bold">{data.name}</h3>
           </div>
         </div>
 
         <div className="flex item justify-center gap-8 mt-6 mb-2">
           <div className="flex gap-2">
             <img src={Humidity} alt="Humidity" className="w-[25px] h-[25px]" />
-            <h4 className="flex flex-col items-center text-sm text-gray-200">
+            <h4 className="flex flex-col items-center text-sm text-gray-800">
               {data.main && data.main.humidity.toFixed()}%<span>Humidity</span>
             </h4>
           </div>
           <div className="flex gap-2">
             <img src={Wind} alt="Wind" className="w-[25px] h-[25px]" />
-            <h4 className="flex flex-col items-center text-sm text-gray-200">
+            <h4 className="flex flex-col items-center text-sm text-gray-800">
               {data.wind && data.wind.speed.toFixed()}km/h
               <span> Wind</span>
             </h4>
