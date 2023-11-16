@@ -10,6 +10,7 @@
     - [📂 Setup](#-setup)
     - [📥 Installation](#-installation)
     - [💻 Usage](#-usage)
+      - [To test our extension, you can follow these steps to load it as an unpacked extension:](#to-test-our-extension-you-can-follow-these-steps-to-load-it-as-an-unpacked-extension)
   - [Authors  ](#authors--)
     - [👧🏼 **Salwa Ballouti**:](#-salwa-ballouti)
     - [👦🏼 **Walid Kabboussa**:](#-walid-kabboussa)
@@ -29,9 +30,11 @@ Transform your New Tab Page into an authentic personal dashboard for enhanced fo
 
 ## 🧰 Tech Stack  <a name="tech-stack"></a>
 
-- React: A JavaScript library for building user interfaces.
+- [React](https://react.dev/): a JavaScript library for building user interfaces.
+
+- [Webpack](https://webpack.js.org/): a popular open-source JavaScript module bundler.
   
-- Tailwind: a utility-first CSS framework.
+- [Tailwind](https://tailwindcss.com/): a utility-first CSS framework.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,6 +89,21 @@ to build the application, execute the following command:
 ```sh
 npm run dev
 ```
+
+
+#### To test our extension, you can follow these steps to load it as an unpacked extension: 
+
+
+1- Open Google Chrome and go to the menu (three dots in the upper right corner).
+
+2- Select "More tools" > "Extensions."
+
+3- Enable "Developer mode" in the top right corner.
+
+4- Click on the "Load unpacked" button.
+
+5- Navigate to the directory where your extension's code is located and select the **'dist'** folder.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
