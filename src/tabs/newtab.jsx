@@ -6,6 +6,9 @@ import RandomWallpaper from "../components/wallpaper/RandomWallpaper.jsx";
 import Geolocation from "../components/geolocation/Geolocation.jsx";
 import Message from '../components/searchBar/message.jsx';
 import TodoApp from '../components/todoList/todoList.jsx'
+import RandomQuote from "../components/quotes/Quote.jsx";
+
+
 
 function Tab() {
   return (
@@ -15,6 +18,7 @@ function Tab() {
       <Message />
       <Weather />
       <TodoApp />
+      <RandomQuote/>   
       <Geolocation />
     </div>
     </>

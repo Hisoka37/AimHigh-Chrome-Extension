@@ -71,14 +71,14 @@ const Weather = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center bg-gray-300 bg-opacity-70 w-[350px] h-[280px] absolute top-4 right-4 rounded-lg">
+    <div className=" flex flex-col items-center bg-gray-200 bg-opacity-90 w-[350px] h-[280px] absolute top-4 right-4 rounded-lg">
       <div className="flex">
         <input
           onChange={(event) => setLocation(event.target.value)}
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-400 pl-4 bg-gray-300 bg-opacity-70 text-gray-300 text-lg transition duration-500 ease-in-out transform hover:bg-gray-700 hover:scale-105 outline-0"
+          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-400 pl-4 bg-gray-300 bg-opacity-70 text-gray-300 text-lg transition duration-500 ease-in-out transform hover:bg-opacity-90 hover:scale-105 outline-0"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();

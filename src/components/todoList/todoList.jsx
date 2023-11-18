@@ -79,7 +79,7 @@ function TodoApp() {
       <h1 className=" font-extrabold leading-3 tracking-tight text-white sm:text-5xl  filter transition duration-300 drop-shadow-xl">
         <span className="block">It's Time to Start :</span>
       </h1>
-      <div className="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
+      <div className="relative flex items-center max-w-md mx-auto mt-20 overflow-hidden text-center rounded-full">
         <input
           type="text"
           placeholder={
@@ -101,11 +101,11 @@ function TodoApp() {
         </span>
       </div>
 
-      <ul className="pt-2 w-full">
+      <ul className="pt-2 w-full overflow-y-auto max-h-96 scrollbar-hide">
         {tasks.map((task, index) => (
           <li
             key={index}
-            className="flex justify-between items-center mb-2 bg-white p-4 rounded-lg  "
+            className="flex justify-between items-center mb-2 bg-white p-2 rounded-lg  "
           >
             <input
               type="checkbox"
@@ -124,28 +124,28 @@ function TodoApp() {
                   setTasks(updatedTasks);
                 }}
                 onKeyPress={handleKeyPress}
-                onBlur={finishEditing} // Finish editing when input loses focus
+                onBlur={finishEditing}
                 className="flex-grow border p-2"
               />
             ) : task.completed ? (
-              <h3 className="text-2xl mr-18  ">
+              <h3 className="text-xl">
                 🎉<del>{task.text}</del>
               </h3>
             ) : (
-              <h3 className="text-2xl mr-18  ">🚀{task.text}</h3>
+              <h3 className="text-xl">🚀{task.text}</h3>
             )}
             <div className="flex flex-col gap-2">
               {editingIndex !== index && (
                 <button
                   onClick={() => startEditing(index)}
-                  className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-blue-400 hover:bg-blue-700 text-white font-bold  p-1 rounded"
                 >
                   Edit
                 </button>
               )}
               <button
                 onClick={() => deleteTask(index)}
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+                className="bg-red-500 hover:bg-red-700 text-white font-bold p-1 rounded"
               >
                 Delete
               </button>
