@@ -18,8 +18,8 @@ function Tab() {
       <Message />
       <Weather />
       <TodoApp />
-      <Geolocation />
       <RandomQuote/>   
+      <Geolocation />
     </div>
     </>
   );

@@ -124,7 +124,7 @@ function TodoApp() {
                   setTasks(updatedTasks);
                 }}
                 onKeyPress={handleKeyPress}
-                onBlur={finishEditing} // Finish editing when input loses focus
+                onBlur={finishEditing}
                 className="flex-grow border p-2"
               />
             ) : task.completed ? (

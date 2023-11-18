@@ -8,8 +8,8 @@ const RandomQuote = () => {
   const randomQuoteSrc = quotes[randomQuoteKey];
 
   return (
-    <div className="absolute inset-x-0 top-0 items-start max-w-2xl mx-auto ml-25  pt-96 lg:pt-72">
-      <h3 className=" text-lg tracking-tight text-white max-w-2xl filter transition duration-300 drop-shadow-xl">{randomQuoteSrc}</h3>
+    <div className="absolute inset-x-0 top-0 items-start max-w-2xl mx-auto mt-2 ml-25  pt-96 lg:pt-72">
+      <h3 className=" text-lg font-bold tracking-tight text-white max-w-2xl filter transition duration-300 drop-shadow-xl">{randomQuoteSrc}</h3>
     </div>
   );
 };

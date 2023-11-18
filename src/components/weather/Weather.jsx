@@ -71,7 +71,7 @@ const Weather = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center bg-gray-300 bg-opacity-70 w-[350px] h-[280px] absolute top-4 right-4 rounded-lg">
+    <div className=" flex flex-col items-center bg-gray-200 bg-opacity-90 w-[350px] h-[280px] absolute top-4 right-4 rounded-lg">
       <div className="flex">
         <input
           onChange={(event) => setLocation(event.target.value)}
