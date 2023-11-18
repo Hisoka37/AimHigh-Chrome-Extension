@@ -101,7 +101,7 @@ function TodoApp() {
         </span>
       </div>
 
-      <ul className="pt-2 w-full">
+      <ul className="pt-2 w-full overflow-y-auto max-h-96 scrollbar-hide">
         {tasks.map((task, index) => (
           <li
             key={index}
