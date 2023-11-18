@@ -79,7 +79,7 @@ function TodoApp() {
       <h1 className=" font-extrabold leading-3 tracking-tight text-white sm:text-5xl  filter transition duration-300 drop-shadow-xl">
         <span className="block">It's Time to Start :</span>
       </h1>
-      <div className="relative flex items-center max-w-md mx-auto mt-12 overflow-hidden text-center rounded-full">
+      <div className="relative flex items-center max-w-md mx-auto mt-20 overflow-hidden text-center rounded-full">
         <input
           type="text"
           placeholder={
