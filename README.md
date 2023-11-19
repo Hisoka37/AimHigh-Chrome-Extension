@@ -22,6 +22,8 @@
   - [📜 License ](#-license-)
 </details>
 
+<img src="">
+
 # AimHigh Tab 📈
 
 Transform your New Tab Page into an authentic personal dashboard for enhanced focus, motivation, and organization. With features likee customizable to-do lists, real-time weather updates, daily inspirational wallpapers, and motivating quotes, experience the perfect start to each browsing session as you work towards your goals.
