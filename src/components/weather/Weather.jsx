@@ -78,7 +78,7 @@ const Weather = () => {
           type="text"
           value={location}
           placeholder="Enter location..."
-          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-400 pl-4 bg-gray-300 bg-opacity-70 text-gray-300 text-lg transition duration-500 ease-in-out transform hover:bg-opacity-90 hover:scale-105 outline-0"
+          className="m-8 w-[250px] h-10 rounded-md border-2 border-gray-400 pl-4 bg-gray-300 bg-opacity-70 text-gray-700 text-lg transition duration-500 ease-in-out transform hover:bg-opacity-90 hover:scale-105 outline-0"
           onKeyPress={(event) => {
             if (event.key === "Enter") {
               searchLocation();
