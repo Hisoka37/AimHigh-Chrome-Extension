@@ -15,5 +15,11 @@
         "storage",
         "tabs",
         "file://*/*" 
-      ]
+      ],
+      "icons": {
+        "16": "../src/assets/logo16.png",   
+        "48": "../src/assets/logo48.png",  
+        "128": "../src/assets/logo128.png"
+      
+    }
 }  
