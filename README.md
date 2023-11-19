@@ -1,3 +1,9 @@
+
+<p align="center">
+  <img src="src/assets/logo.png" width="500px" height="auto">
+</p>
+
+
 <a name="readme-top"></a>
 <details>
 <summary>Table of Contents</summary>
@@ -21,8 +27,6 @@
   - [🙏 Acknowledgements](#-acknowledgements)
   - [📜 License ](#-license-)
 </details>
-
-<img src="">
 
 # AimHigh Tab 📈
 
