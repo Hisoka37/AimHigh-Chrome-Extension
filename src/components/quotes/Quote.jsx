@@ -3,8 +3,7 @@ import quotes from "../../objects/quotes.json";
 
 const RandomQuote = () => {
   const quoteKeys = Object.keys(quotes);
-  const randomIndex = Math.floor(Math.random() * quoteKeys.length);
-  const randomQuoteKey = quoteKeys[randomIndex];
+  const randomQuoteKey = quoteKeys[Math.floor(Math.random() * quoteKeys.length)];
   const randomQuoteSrc = quotes[randomQuoteKey];
 
   return (
